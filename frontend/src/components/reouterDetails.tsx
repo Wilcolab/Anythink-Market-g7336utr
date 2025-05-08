@@ -1,12 +1,16 @@
-// src/components/RouterDetails.tsx
+
 import React, { useEffect, useState } from 'react';
 import { Router } from '../types/router';
+import { useParams } from 'react-router-dom';
 
 type Props = {
   routerId: string;
 };
 
-const RouterDetails: React.FC<Props> = ({ routerId }) => {
+const RouterDetails: React.FC = () => {
+    const { routerId } = useParams();
+  
+    if (!routerId) return <p>Router ID not found</p>;
   const [router, setRouter] = useState<Router | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
