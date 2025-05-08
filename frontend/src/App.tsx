@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import RouterList from './components/RouterList'; // Make sure the path matches your folder structure
+import RouterList from './components/RouterList';
 
 function App() {
   return (
